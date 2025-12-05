@@ -1,8 +1,5 @@
-resource_machine = {'water':300, 'milk':200, 'coffee':100}
-test = str(resource_machine.values())
-
-# for i in resource_machine:
-#     print(f'{i} : {resource_machine[i]}')
+resource_machine = {'Water':300, 'Milk':200, 'Coffee':100, 'Money':0}
+units = units = {'Water': 'ml', 'Milk': 'ml', 'Coffee': 'g', 'Money': '$'}
 
 drinks = {
     'espresso':
@@ -19,7 +16,7 @@ drinks = {
     'coffee': 24,
     'milk':   150
     },
-    'capuccino':
+    'cappuccino':
     {
     'price': 3.00,
     'water': 250,
@@ -28,4 +25,4 @@ drinks = {
     }
     }
 
-print(drinks['espresso'])
+coins = {'penny': 0.01, 'nickle': 0.05, 'dime': 0.10, 'quarter': 0.25}
