@@ -62,8 +62,8 @@ def manage_coffee_machine(beverage):
 
 
 while loop:
-    choise = input('What would you like? (espresso/latte/cappuccino): ')
-    if choise.lower() == 'report':
+    choice = input('What would you like? (espresso/latte/cappuccino): ')
+    if choice.lower() == 'report':
         for i in resources.resource_machine:
             unit = resources.units.get(i, "")
             if resources.units == '$':
@@ -71,19 +71,19 @@ while loop:
             else:
                 print(f'{i} : {resources.resource_machine[i]}{unit}')
             
-    elif choise.lower() == 'espresso':        
-        print(manage_coffee_machine(choise.lower()))
+    elif choice.lower() == 'espresso':        
+        print(manage_coffee_machine(choice.lower()))
         
      
-    elif choise.lower() == 'latte':       
-        print(manage_coffee_machine(choise.lower()))
+    elif choice.lower() == 'latte':       
+        print(manage_coffee_machine(choice.lower()))
 
 
-    elif choise.lower() == 'cappuccino':        
-        print(manage_coffee_machine(choise.lower()))
+    elif choice.lower() == 'cappuccino':        
+        print(manage_coffee_machine(choice.lower()))
         
        
-    elif choise.lower() == 'off':
+    elif choice.lower() == 'off':
         print('Shutting down for maintenance')
         loop = False
         
