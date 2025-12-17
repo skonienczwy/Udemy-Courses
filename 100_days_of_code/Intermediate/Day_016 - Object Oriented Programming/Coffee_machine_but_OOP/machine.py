@@ -13,11 +13,15 @@ class CoffeeMaker:
     
     def is_resource_sufficient(self, drink):
         ingredients = drinks[drink]['ingredients']
+        missing_ingredients = []
         for item, amount_needed in ingredients.items():
             current_amount = getattr(self, item)
             if amount_needed > current_amount:
+                missing_ingredients.append(item)
+        if missing_ingredients:
+            for item in missing_ingredients:
                 print(f'Sorry there is not enough {item}.')
-                return False
+            return False        
         return True
             
     def make_coffe(self, order):
